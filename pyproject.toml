@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ticitl-web"
+version = "0.1.0"
+description = "Thi is ticitl website made by iconitodev.com"
+authors = ["Julio Conchas <conchasjimenez@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.1.0"
+waitress = "^3.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

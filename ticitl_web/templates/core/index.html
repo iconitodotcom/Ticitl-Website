@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ticitl — Clinica Virtual</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body id="top">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-ticitl-title" href="#top">Ticitl</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#functions">Funciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="#advantage">Ventajas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#purchase">Planes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li> 
+        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li> 
+        <li class="nav-item"><a class="btn btn-ticitl-outline-primary ms-2" href="#purchase">Comenzar ahora!</a></li>
+        <li class="nav-item"><a class="btn btn-ticitl-primary ms-2" href="#">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="d-flex align-items-center bg-ticitl-primary-30 text-white vh-100 text-center" style="margin-top:56px;">
+    <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+            <div class="col-md-6">
+                <h1 class="display-4">Tu Clinica, organizada y simple</h1>
+                <p class="lead">Clinica y negocios todo en una sola plataforma, pacientes, finanzas, reportes y más. Pruebalo gratis!</p>
+                <a href="#" class="btn btn-ticitl-primary btn-lg mt-3">Iniciar Prueba Gratis</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="{{ url_for('static', filename='imgs/hero_img.png') }}" alt="Dashboard" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sections Functions -->
+<div id="functions" class="pt-5">
+    <!-- Sections Overview -->
+    <section id="dashboard" class="py-5 bg-ticitl-primary-60">
+      <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <h3 class="text-ticitl-secondary">Dashboard</h3>
+            <p>Visualiza al instante las próximas citas, estadísticas de pacientes, resúmenes financieros y alertas. Con un diseño intuitivo y actualizaciones en tiempo real, siempre estarás informado y en control.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='imgs/ticitl_dashboard.png') }}" alt="Dashboard" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="patients" class="py-5 bg-ticitl-secondary-60">
+      <div class="container">
+        <div class="row align-items-center flex-md-row-reverse" data-aos="fade-up">
+          <div class="col-md-6">
+            <h3 class="text-ticitl-primary">Pacientes</h3>
+            <p>Consulta perfiles, historiales médicos, citas programadas y registros de comunicación en un solo lugar.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='imgs/ticitl_patients.png') }}" alt="Patients" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="py-5 bg-ticitl-primary-60">
+      <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <h3 class="text-ticitl-secondary">Agenda</h3>
+            <p>Gestiona citas rápidamente, establece recordatorios y visualiza calendarios diarios, semanales o mensuales.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='imgs/ticitl_agenda.png') }}" alt="Schedule" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="finance" class="py-5 bg-ticitl-secondary-60">
+      <div class="container">
+        <div class="row align-items-center flex-md-row-reverse" data-aos="fade-up">
+          <div class="col-md-6">
+            <h3 class="text-ticitl-primary">Finance</h3>
+            <p>Realiza un seguimiento sencillo de pagos, facturas, gastos y saldos pendientes, todo en un solo lugar.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='imgs/ticitl_finance.png') }}" alt="Finance" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reports" class="py-5 bg-ticitl-primary-60">
+      <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <h3 class="text-ticitl-secondary">Reports</h3>
+            <p>Genera resúmenes detallados de citas, tratamientos, pagos y saldos pendientes con solo unos clics</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='imgs/ticitl_reports.png') }}" alt="Reports" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="py-5 bg-ticitl-secondary-60">
+      <div class="container">
+        <div class="row align-items-center flex-md-row-reverse" data-aos="fade-up">
+          <div class="col-md-6">
+            <h3 class="text-ticitl-primary">Tools</h3>
+            <p>Accede a funciones como copias de seguridad, importación/exportación de pacientes, sistemas de recordatorios y plantillas personalizables para mejorar la eficiencia.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='imgs/ticitl_tools.png') }}" alt="Tools" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="configuration" class="py-5 bg-ticitl-primary-60">
+      <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <h3 class="text-ticitl-secondary">Configuration</h3>
+            <p>Administra roles de usuario, permisos de acceso, configuraciones de notificaciones y la apariencia del sistema para adaptar la plataforma a tu flujo de trabajo.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='imgs/ticitl_config.png') }}" alt="Configuration" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<!-- Advantages Section -->
+<section id="advantage" class="d-flex align-items-center py-5 bg-ticitl-secondary-60" style="height: 90vh;">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4 ">Por que <span class="text-ticitl-title">Ticitl</span>?</h2>
+    <div class="row text-center">
+      <div class="col-md-3">
+        <i class="bi bi-headset fs-1 text-ticitl-secondary"></i>
+        <h5 class="mt-2 text-sub">Soporte tecnico</h5>
+        <p class="text-ticitl-light">Rapido, amigable, y confiable soporte para todas tus necesidades.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="bi bi-lightbulb fs-1 text-ticitl-secondary"></i>
+        <h5 class="mt-2 text-sub">Innovación</h5>
+        <p class="text-ticitl-light">Plataforma moderna, basada en cloud online 24/7.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="bi bi-arrow-repeat fs-1 text-ticitl-secondary"></i>
+        <h5 class="mt-2 text-sub">Actualizaciones Constantes</h5>
+        <p class="text-ticitl-light">Siempre a la banguardia, plataforma en constante actualización sin afectar tus proceso.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="bi bi-lock fs-1 text-ticitl-secondary"></i>
+        <h5 class="mt-2 text-sub">Seguridad</h5>
+        <p class="text-ticitl-light">Tu información y la de tus pacientes encriptada, segura y aislada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Purchase Section -->
+<section id="purchase" class="d-flex align-items-center py-5 bg-ticitl-primary-60" style="height: 90vh;">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4">Planes</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Plan Basico</h5>
+            <p class="card-text">Perfecto para clinicas pequeñas. Incluye dashboard, administración de pacientes y un amplio suporte.</p>
+            <h4>$29 mensual</h4>
+            <a href="{{ url_for('core.signup',plan='basico' ) }}" class="btn btn-ticitl-primary">Elegir plan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 border-ticitl-primary">
+          <div class="card-body text-center">
+            <h5 class="card-title">Plan Profecional</h5>
+            <p class="card-text">Ideal para clinicas medianas, Plan Basico más reportes, calendario y administración financiera.</p>
+            <h4>$59 mensual</h4>
+            <a href="{{ url_for('core.signup',plan='profesional' ) }}" class="btn btn-ticitl-primary">Elegir plan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Plan Empresarial</h5>
+            <p class="card-text">Lo mejore para clinicas grandes. Paquete completo, configuración actualizaciones y suporte prioritario.</p>
+            <h4>$99 mensual</h4>
+            <a href="{{ url_for('core.signup',plan='empresarial' ) }}" class="btn btn-ticitl-primary">Elegir plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About us Section -->
+<section id="about" class="d-flex align-items-center py-5 bg-ticitl-secondary-60" style="height: 90vh;">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4 text-ticitl-title">Nosotros</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{{ url_for('static', filename='imgs/ticitl_devs.jpg') }}" alt="About Ticitl" class="img-fluid rounded shadow-sm">
+      </div>
+      <div class="col-md-6">
+        <h4 class="text-ticitl-title">Ticitl — Empoderando Clinicas Modernas</h4>
+        <p>Ticitl es una plataforma innovadora diseñada para simplificar la operación de clinicas medicas y dentales.
+          desde administración de pacientes a manejo financiero, Ticitl te da el control con una interfas intuitiva, actualización constante y soporte tecnico de primera categoria. </p>
+        <h5 class="mt-4 text-ticitl-title">IconitoDev.com</h5>
+        <p>Desarrollado por <strong>IconitoDev.com</strong>, Somos un equipo apacionado por construir soluciones innovadoras de software.
+        Nos especializamos en herramientas que incrementaran la productividad y simplificaran los procesos de tu negocio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact us Section -->
+<section id="contact" class="d-flex align-items-center py-5 bg-ticitl-secondary-30" style="height: 90vh;">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4 text-white">Contactanos</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electronico</label>
+            <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu menaje aquí..." required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-ticitl-secondary">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-ticitl-primary-10 text-white text-center">
+  <div class="container">
+    <p class="mb-1">© 2025 IconitoDev.com — We build tools for a better experience</p>
+    <small class="text-muted">Contact: support@iconitodev.com</small>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
